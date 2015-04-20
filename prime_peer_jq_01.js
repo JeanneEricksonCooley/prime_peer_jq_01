@@ -9,6 +9,7 @@ $(document).ready(function(){
 
 
 		var anotherPerson = new Person(age, sex, weight);
+		console.log(anotherPerson);
 		$("#people").prepend("<li>"+ anotherPerson.age  + ", " + anotherPerson.sex + ", " + anotherPerson.weight + "</li>");
 
 
@@ -20,12 +21,13 @@ $(document).ready(function(){
 
 
 function Person(age, sex, weight) {
+	console.log("Person created");
 	this.age = age;
 	this.sex = sex;
 	if (this.sex == 1) {
-		return "male";
+		this.sex =  "male";
 	} else {
-		return "female";
+		this.sex = "female";
 	}
 	this.weight = weight;
 }; 
